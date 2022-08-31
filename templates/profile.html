@@ -1,0 +1,33 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9/jquery.min.js"></script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#ON').bind('click', function() {
+            $.getJSON('/backgound_process_test',
+                function(data) {
+
+                });
+            return false;
+        });
+    });
+
+    $(function() {
+        $('a#OFF').bind('click', function() {
+            $.getJSON('/backgound_process_test1',
+                function(data) {
+
+                });
+            return false;
+        });
+    });
+
+</script>
+
+<div class="container">
+    <h1>Arduino LED toggle</h1>
+    <form>
+        <a href=# id=ON><button class='btn btn-default'>ON</button></a>"
+        <a href=# id=OFF><button class='btn btn-default'>OFF</button></a>"
+    </form>
+</div>
